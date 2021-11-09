@@ -3,6 +3,7 @@ const ConnectDB=require('./connection');
 const user=require('./user');
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get('/select',async (req,res)=>{
     const data = await user.find();
